@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CampusFix | Admin Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>CampusFix</h1>
+      <p class="tagline">Admin Dashboard</p>
+    </div>
+    <nav class="nav-actions">
+      <a class="nav-link" href="index.html">Student Portal</a>
+      <button id="logoutBtn" class="btn btn-danger btn-small">Logout</button>
+    </nav>
+  </header>
+ 
+  <main class="page-grid">
+    <section class="card">
+      <div class="section-head">
+        <h2>Dashboard Overview</h2>
+        <p>Monitor issue trends and update report status.</p>
+      </div>
+ 
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span>Total Issues</span>
+          <strong id="totalIssues">0</strong>
+        </div>
+        <div class="stat-card pending">
+          <span>Pending</span>
+          <strong id="pendingIssues">0</strong>
+        </div>
+        <div class="stat-card progress">
+          <span>In Progress</span>
+          <strong id="inProgressIssues">0</strong>
+        </div>
+        <div class="stat-card resolved">
+          <span>Resolved</span>
+          <strong id="resolvedIssues">0</strong>
+        </div>
+      </div>
+    </section>
+ 
+    <section class="card">
+      <div class="section-head section-head-split">
+        <div>
+          <h3>All Submitted Issues</h3>
+          <p>Filter reports and update them from one place.</p>
+        </div>
+        <div class="filter-row">
+          <select id="statusFilter">
+            <option value="All">All Statuses</option>
+            <option value="Pending">Pending</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Resolved">Resolved</option>
+          </select>
+          <select id="categoryFilter">
+            <option value="All">All Categories</option>
+            <option>Furniture</option>
+            <option>Water</option>
+            <option>Electricity</option>
+            <option>Sanitation</option>
+            <option>Internet/ICT</option>
+            <option>Security</option>
+            <option>Classroom Damage</option>
+            <option>Hostel Issue</option>
+            <option>Other</option>
+          </select>
+        </div>
+      </div>
+ 
+      <div id="adminIssueList" class="issue-list"></div>
+    </section>
+  </main>
+ 
+  <script src="app.js"></script>
+</body>
+</html>

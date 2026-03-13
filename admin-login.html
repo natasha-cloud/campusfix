@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CampusFix | Admin Login</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <div class="logo-container">
+        <img src="images\logo.png.png" alt="School Logo" class="school-logo">
+      <h1>CampusFix</h1>
+    </div>
+    <a href="index.html" class="back-btn">Back</a>
+
+  </header>
+ 
+  <main class="center-page">
+    <section class="card login-card">
+      <span class="badge">Admin Access Only</span>
+      <h2>Sign in </h2>
+ 
+      <div class="form-group">
+        <label for="adminUsername">Username</label>
+        <input type="text" id="adminUsername" placeholder="" />
+      </div>
+ 
+      <div class="form-group">
+        <label for="adminPassword">Password</label>
+        <input type="password" id="adminPassword" placeholder="" />
+      </div>
+ 
+      <button id="loginBtn" class="btn btn-primary btn-block">Login</button>
+      <div id="loginMessage" class="inline-message"></div>
+ 
+      
+    </section>
+  </main>
+ 
+  <script src="app.js"></script>
+</body>
+</html>

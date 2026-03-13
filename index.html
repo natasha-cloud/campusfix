@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CampusFix</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo-container">
+        <img src="images\logo.png.png" alt="School Logo" class="school-logo">
+        <h1>CampusFix</h1>
+        <p class="tagline">Report. Track. Fix.</p>
+    </div>
+    <nav>
+      <a class="nav-link" href="admin-login.html">Admin Login</a>
+    </nav>
+  </header>
+ 
+  <main class="page-grid">
+    <section class="hero card hero-card">
+      <div class="hero-copy">
+        <span class="badge">Student Portal</span>
+        <h2>Report campus issues in a simple and organized way</h2>
+        <p>
+          Submit broken furniture, water leaks, poor sanitation, internet problems,
+          electricity issues, and other campus concerns. You will receive a ticket
+          number to track the issue later.
+        </p>
+      </div>
+      <div class="hero-illustration">
+        <div class="stat-pill">Fast reporting</div>
+        <div class="stat-pill">Ticket tracking</div>
+        <div class="stat-pill">Photo evidence</div>
+      </div>
+    </section>
+ 
+    <section class="card">
+      <div class="section-head">
+        <h3>Report an Issue</h3>
+        <p>Fill in the form below and submit your report.</p>
+      </div>
+ 
+      <form id="issueForm" class="form-grid">
+        <div class="form-group">
+          <label for="studentName">Your Name</label>
+          <input type="text" id="studentName" placeholder="" required />
+        </div>
+ 
+        <div class="form-group">
+          <label for="studentEmail">Email or Student Number</label>
+          <input type="text" id="studentEmail" placeholder="" required />
+        </div>
+ 
+        <div class="form-group">
+          <label for="issueTitle">Issue Title</label>
+          <input type="text" id="issueTitle" placeholder="e.g. Broken chair" required />
+        </div>
+ 
+        <div class="form-group">
+          <label for="issueCategory">Category</label>
+          <select id="issueCategory" required>
+            <option value="">Select category</option>
+            <option>Furniture</option>
+            <option>Water</option>
+            <option>Electricity</option>
+            <option>Sanitation</option>
+            <option>Internet/ICT</option>
+            <option>Security</option>
+            <option>Classroom Damage</option>
+            <option>Hostel Issue</option>
+            <option>Other</option>
+          </select>
+        </div>
+ 
+        <div class="form-group">
+          <label for="issueLocation">Location</label>
+          <input type="text" id="issueLocation" placeholder="e.g. Lecture Room B12" required />
+        </div>
+ 
+        <div class="form-group">
+          <label for="issuePriority">Priority</label>
+          <select id="issuePriority" required>
+            <option value="">Select priority</option>
+            <option>Low</option>
+            <option>Medium</option>
+            <option>Critical</option>
+          </select>
+        </div>
+ 
+        <div class="form-group form-group-full">
+          <label for="issueDescription">Description</label>
+          <textarea id="issueDescription" rows="5" placeholder="Describe the problem clearly..." required></textarea>
+        </div>
+ 
+        <div class="form-group form-group-full">
+          <label for="issuePhoto">Upload Photo (optional)</label>
+          <input type="file" id="issuePhoto" accept="image/*" />
+          <div id="photoPreviewWrap" class="photo-preview hidden">
+            <img id="photoPreview" alt="Issue preview" />
+          </div>
+        </div>
+ 
+        <div class="form-actions form-group-full">
+          <button type="submit" class="btn btn-primary">Submit Issue</button>
+          <button type="reset" id="resetFormBtn" class="btn btn-secondary">Reset Form</button>
+        </div>
+ 
+        <div id="submissionMessage" class="inline-message"></div>
+      </form>
+    </section>
+ 
+    <section class="card">
+      <div class="section-head">
+        <h3>Track Your Ticket</h3>
+        <p>Enter the ticket number you received after submission.</p>
+      </div>
+ 
+      <div class="track-row">
+        <input type="text" id="ticketSearch" placeholder="e.g. CF-001" />
+        <button id="trackBtn" class="btn btn-primary">Track Issue</button>
+      </div>
+ 
+      <div id="trackedIssue" class="tracked-issue empty-state">
+        No ticket searched yet.
+      </div>
+    </section>
+  </main>
+ 
+  <script src="app.js"></script>
+</body>
+</html>
